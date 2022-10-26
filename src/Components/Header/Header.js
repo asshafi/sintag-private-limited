@@ -12,10 +12,11 @@ const Header = () => {
   
     return (
         
+    <header>
         <nav id="nav" class="navbar navbar-expand-md fixed-top ">
             <div class="container-fluid d-flex justify-content-between">
-                <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
-                    <Link to="/" className="navbar-brand  text-dark text-decoration-none d-flex align-items-center col-md-auto mb-2 mb-md-0 text-dark text-decoration-none">
+                <div class="d-flex align-items-center mb-md-0 me-md-auto">
+                    <Link to="/" className="navbar-brand  text-dark text-decoration-none d-flex align-items-center col-md-auto  mb-md-0 text-dark text-decoration-none">
                       <img className='img-fluid w-50' src="images/logo/SWS (1).png" alt="" />
                     </Link>
                     
@@ -25,8 +26,8 @@ const Header = () => {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse px-4 " id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0 ">
+                <div class="collapse navbar-collapse px-2 " id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-md-0 ">
                     <li><NavLink to="/" className={(({ isActive }) => isActive ? activeClassName : inActiveClass)} end>Home</NavLink></li>
                         <li><NavLink to="/products" className={(({ isActive }) => isActive ? activeClassName : inActiveClass)} end>Products</NavLink></li>
                         <li><NavLink to="/news" className={(({ isActive }) => isActive ? activeClassName : inActiveClass)} end>News</NavLink></li>
@@ -38,6 +39,9 @@ const Header = () => {
                 </div>
             </div>
         </nav>
+        <picture><img className='w-100  mt-5' src="images/BANNER1.jpg" alt="" /></picture>
+    </header>
+        
     );
 };
 
