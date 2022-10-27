@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import './Header.css';
 import { AuthContext } from '../../Contexts/UserContext';
-import LocalStore from '../../Storage';
+import LocalStore from '../../Storage/Storage';
+
 
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
