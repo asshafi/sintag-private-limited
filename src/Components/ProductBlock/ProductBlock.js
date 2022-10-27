@@ -3,10 +3,11 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const ProductBlock = ({ limit, title }) => {
     let products = useLoaderData();
+    
     limit = parseInt(limit);
     
-    products=products=Object.keys(products);;
     products = products.filter((el, k) => k < limit);
+    
     
     return (
         <div>
@@ -15,15 +16,15 @@ const ProductBlock = ({ limit, title }) => {
             </p>
             <div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 mt-3 mb-5 mx-0 gy-5">
                 {products.map((c) => {
-                    return (<div className="col align-self-stretch" key={c.id}>
+                    return (<div className="col border shadow  g-5 align-self-stretch" key={c.id}>
                         <Link to={`/product/${c.id}`} className="link-dark row rounded courses me-md-1 text-decoration-none">
                             <div className="col-12 px-0">
                                 <img src={`/${c.img}`} className="rounded w-100 h-100" alt="" />
                             </div>
                             <div className="col-12 align-self-center py-3 ps-4">
-                                <h4>{c.title}</h4>
+                                <h4 className='fw-bold'>{c.title}</h4>
                                 <p>{c.desc}</p>
-                                <p className="fw-bolder prices fs-4">Price : {c.price}$</p>
+                                <p className="fw-bolder prices fs-4">Price : {c.price} $</p>
                             </div>
                         </Link>
                     </div>)

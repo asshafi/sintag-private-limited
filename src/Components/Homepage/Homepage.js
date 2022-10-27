@@ -4,7 +4,8 @@ import ProductBlock from '../ProductBlock/ProductBlock';
 
 const Homepage = () => {
     return (
-        <div className='container'>
+        <div className=''>
+             <picture><img className='w-100 mt-3' src="images/BANNER1.jpg" alt="" /></picture>
             {/* news section  */}
             <picture> <img className='img-fluid' src='images/nws.png' alt=''/></picture>
             

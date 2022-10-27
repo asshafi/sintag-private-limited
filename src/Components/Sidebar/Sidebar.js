@@ -4,10 +4,10 @@ import { Link, useLoaderData } from 'react-router-dom';
 const Sidebar = () => {
     const products = useLoaderData();
     return (
-        <ul className="list-unstyled ps-0">
-            <li className="mb-1">
-                <button className="colormain ps-0 btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                    Popular Products
+        <ul className="list-unstyled ps-0 ">
+            <li className="mb-1 ">
+                <button className="colormain ps-0 mt-5 fs-3 fw-bold text-primary btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                    Popular Products :
                 </button>
                 <div className="collapse show" id="home-collapse">
                     <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -22,7 +22,7 @@ const Sidebar = () => {
             </li>
             <li className="border-top my-3"></li>
             <li className="mb-1">
-                <button className="colormain btn ps-0 btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="true">
+                <button className="colormain btn ps-0 fs-3 fw-bold text-primary btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="true">
                     Account
                 </button>
                 <div className="collapse show" id="account-collapse">

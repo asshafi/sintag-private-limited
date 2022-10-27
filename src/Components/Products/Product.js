@@ -1,6 +1,7 @@
 import React from 'react';
-import { useParams, useLoaderData } from 'react-router-dom';
-
+import { useParams, useLoaderData, Link } from 'react-router-dom';
+import Sidebar from '../Sidebar/Sidebar';
+import ReactToPdf from "react-to-pdf";
 
 const ref = React.createRef();
 
@@ -13,7 +14,7 @@ const Product = () => {
         <div className='container'>
             <div className='row'>
                 <div className="col-md-8 mt-5">
-                    <div className="row rounded courses me-lg-1" ref={ref}>
+                    <div className="row rounded  produtcs me-lg-1" ref={ref}>
                         <div className="col-12 col-sm-4 px-0">
                             <img src={`/${product.img}`} className="rounded w-100 h-100" alt="" />
                         </div>
@@ -29,9 +30,16 @@ const Product = () => {
                                 </li>
                             </ul>
                             <p className="fw-bolder prices fs-4 mb-0">Price : {product.price}$</p>
-                            
+                            <Link to={`/buy-course/${product.id}`} className="mt-3 btn btn-primary text-uppercase me-2">Get premium access <i className="ms-1 fa fa-angle-right" aria-hidden="true"></i></Link>
+
+                            <ReactToPdf targetRef={ref} filename={`${product.title}.pdf`}>
+                                {({ toPdf }) => <button onClick={toPdf} className="mt-3 btn btn-outline-primary text-uppercase">Download <i className="ms-1 fa fa-download" aria-hidden="true"></i></button>}
+                            </ReactToPdf>
                         </div>
                     </div>
+                </div>
+                <div className="flex-shrink-0 p-3 pt-5 col-md-4">
+                    <Sidebar></Sidebar>
                 </div>
             </div>
         </div>
