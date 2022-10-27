@@ -13,7 +13,7 @@ const Login = () => {
     const handleGoogleSignIn = (event) => {
         signInWithGoogle().then(() => {
             setLoading(false);
-            toast("Login success!")
+            toast("Login Success Your Account!")
             navigate(from);
         })
             .catch(error => { toast(error.message); setLoading(false); });
@@ -21,7 +21,7 @@ const Login = () => {
     const handleGithubSignIn = (event) => {
         signInWithGithub().then(() => {
             setLoading(false);
-            toast("Login success!")
+            toast("Login Success Your Account!")
             navigate('/');
         })
             .catch(error => { toast(error.message); setLoading(false); });
@@ -53,16 +53,16 @@ const Login = () => {
                 console.log(user);
                 form.reset();
                 setLoading(false);
-                toast("Login Success!")
+                toast("Login Success Your Account!")
                 navigate(from, { replace: true })
             })
             .catch(error => { toast(error.message); setLoading(false); });
     }
 
     return (
-        <div className="m-auto col-md-6 mt-5">
-            <h2>Hello!! Welcome back.</h2>
-            <p>Log in with your saved data.</p>
+        <div className="m-auto col-md-6 mt-5 pt-5">
+            <h2 className='pt-5 text-center'>Hello!! Welcome back.</h2>
+            <p className='text-center'>Log in with your saved data.</p>
             <form className="mt-5" onSubmit={handleSubmit}>
                 {error ? <p className='alert alert-danger'>{error}</p> : ''}
                 <div className="form-group mt-4">
@@ -78,11 +78,11 @@ const Login = () => {
                         <input className="form-control pe-5" id="inputPassword5" name="password" type="password" placeholder="Enter password" required="" />
                     </div>
                 </div>
-                <button className="btn btn-primary w-100 mt-5 submit-btn" type="submit" disabled={loading}>Start now !</button>
+                <button className="btn btn-primary w-100 mt-5 submit-btn" type="submit" disabled={loading}>Register now </button>
             </form>
             <div className="my-4 text-center"><span className="mx-3 span-or text-secondary">OR</span></div>
-            <button className="btn btn-outline-secondary w-100 submit-btn" type="button" onClick={handleGoogleSignIn} > <img className="me-3" src="/img/google-icon.svg" alt="Google" />Start now !</button>
-            <button className="btn btn-outline-secondary goolge-signin w-100 submit-btn mt-3" type="button" onClick={handleGithubSignIn}> <img className="me-3" src="/img/GitHub-Mark-32px.png" alt="github" />Start now !</button>
+            <button className="btn btn-outline-secondary w-100 submit-btn" type="button" onClick={handleGoogleSignIn} > <img className="me-3" src="" alt="" />Sign in with Google</button>
+            <button className="btn btn-outline-secondary goolge-signin w-100 submit-btn mt-3" type="button" onClick={handleGithubSignIn}> <img className="me-3" src="" alt="" />Sign in with Git-hub</button>
             <span className="card-text mt-5 d-block text-center">Don’t have an account? <Link className="text-focus" to="/signup"> Sign up</Link></span>
         </div>
     );

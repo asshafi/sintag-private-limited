@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import './Header.css';
 import { AuthContext } from '../../Contexts/UserContext';
 import LocalStore from '../../Storage/Storage';
+import './Header.css';
 
 
 const Header = () => {
@@ -28,7 +28,7 @@ const Header = () => {
     }
 })
    
-    const user  = useContext(AuthContext);
+    const {user}  = useContext(AuthContext);
     const location = useLocation();
     let activeClassName = "nav-link px-2 link-dark active-link nav-item fw-bold";
     let inActiveClass = "nav-link px-2 link-dark nav-item text-white fw-bold";

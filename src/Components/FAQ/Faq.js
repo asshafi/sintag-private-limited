@@ -5,7 +5,7 @@ const Faq = () => {
         <div className='container mt-5'>
             <div class="row">
                 <div class="col-md-8 mx-auto text-center">
-                    <h2 class="h1">Frequently Asked Questions</h2>
+                    <h2 class="h1 mt-5 pt-5">Frequently Asked Questions</h2>
                 </div>
             </div>
             <div class="row mt-3">

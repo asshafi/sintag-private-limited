@@ -2,8 +2,8 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='container mt-5'>
-            <h1 className='text-center my-3 mb-5'>Blog</h1>
+        <div className='container mt-5 pt-5'>
+            <h1 className='text-center my-3 pt-5 mb-5 fw-bold'>Blog Posts</h1>
             <h2>what is cors?</h2>
             <p>Cross-origin resource sharing is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. A web page may freely embed cross-origin images, stylesheets, scripts, iframes, and videos.</p>
             <h2>Why are you using firebase? What other options do you have to implement authentication?</h2>
