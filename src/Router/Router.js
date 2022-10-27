@@ -11,9 +11,9 @@ const Router= createBrowserRouter([
             {
                 path: "/",
                 element: <Homepage />,
-                // loader: () => {
-                //     return fetch(`${process.env.REACT_APP_SERVER_URL}/courses`);
-                // }
+                loader: () => {
+                    return fetch(`${process.env.REACT_APP_SERVER_URL}/products`);
+                }
             },
 
         ]
