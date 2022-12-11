@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "sintag-private-limited",
   storageBucket: "sintag-private-limited.appspot.com",
   messagingSenderId: "117122417489",
-  appId: "1:117122417489:web:bbcd80bcc6a9f52cbe4970"
+  appId: "1:117122417489:web:88366402e8b0ca16be4970"
 };
 
 // Initialize Firebase

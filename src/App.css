@@ -6,3 +6,26 @@ body {
     overflow-x: hidden;
     background-color: rgb(238, 239, 239);
 }
+
+.dark {
+    background-color: #111 !important;
+    color: #eee;
+}
+
+.dark *,
+.dark a.active-link {
+    color: #eee !important;
+}
+
+.dark .bg-light,
+.dark .Toastify__toast {
+    background-color: #333 !important;
+}
+
+.dark .bg-white {
+    background-color: #000 !important;
+}
+
+.dark .bg-black {
+    background-color: #eee !important;
+}

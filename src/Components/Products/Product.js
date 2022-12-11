@@ -9,7 +9,8 @@ const ref = React.createRef();
 const Product = () => {
     const products = useLoaderData();
     let { id } = useParams();
-    let product = products.find((el) => el.id === id);
+    let product = products.find((el) => el.id == id);
+    console.log(product, id);
     return (
         <div className='container'>
             <div className='row'>
@@ -30,7 +31,7 @@ const Product = () => {
                                 </li>
                             </ul>
                             <p className="fw-bolder prices fs-4 mb-0">Price : {product.price}$</p>
-                            <Link to={`/buy-course/${product.id}`} className="mt-3 btn btn-primary text-uppercase me-2">Get premium access <i className="ms-1 fa fa-angle-right" aria-hidden="true"></i></Link>
+                            <Link to={`/buy-product/${product.id}`} className="mt-3 btn btn-primary text-uppercase me-2">Get premium access <i className="ms-1 fa fa-angle-right" aria-hidden="true"></i></Link>
 
                             <ReactToPdf targetRef={ref} filename={`${product.title}.pdf`}>
                                 {({ toPdf }) => <button onClick={toPdf} className="mt-3 btn btn-outline-primary text-uppercase">Download <i className="ms-1 fa fa-download" aria-hidden="true"></i></button>}
